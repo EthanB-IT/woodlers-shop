@@ -98,6 +98,14 @@
 
         // ---------------------------------------------------------
         // VULNERABILITY #1: RACE CONDITION (TOCTOU)
+        async function attemptPurchase(id, name, price) {
+            const msgEl = document.getElementById(`msg-${id}`);
+        const btn = document.getElementById(`btn-${id}`);
+                if (btn.disabled) return;
+
+                btn.disabled = true;
+
+
         // ---------------------------------------------------------
         // Global counter to track simultaneous requests
         let activeRequests = 0;
@@ -215,4 +223,5 @@
         }
     </script>
 </body>
+
 </html>
