@@ -100,7 +100,7 @@
         // VULNERABILITY #1: RACE CONDITION (TOCTOU)
         async function attemptPurchase(id, name, price) {
             const msgEl = document.getElementById(`msg-${id}`);
-const btn = document.getElementById(`btn-${id}`);
+        const btn = document.getElementById(`btn-${id}`);
                 if (btn.disabled) return;
 
                 btn.disabled = true;
@@ -226,4 +226,5 @@ const btn = document.getElementById(`btn-${id}`);
 </body>
 
 </html>
+
 
